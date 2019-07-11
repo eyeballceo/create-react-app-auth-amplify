@@ -1,5 +1,6 @@
 import React, { Component, Text } from 'react';
 import logo from './logo.svg';
+import work_on_mobile from './please_work_on_mobile.png';
 import './App.css';
 import { withAuthenticator, PhotoPicker } from 'aws-amplify-react'
 import Amplify, { Auth } from 'aws-amplify';
@@ -10,7 +11,7 @@ Amplify.configure(aws_exports);
 
 class App extends SignIn {
   render() {
-    if (isMobile==false) {
+    if (isMobile==true) {
       return (
         <div className="App">
           <header className="App-header">
@@ -20,10 +21,7 @@ class App extends SignIn {
       );
     } else {
       return (
-        <div>
-          <Text>eyeball ads is not available on mobile.</Text>
-          <Text>Please work on eyeball ads from a desktop computer.</Text>
-        </div>
+        <img src={work_on_mobile} alt="work_on_mobile"/>
       );
     }
   }
