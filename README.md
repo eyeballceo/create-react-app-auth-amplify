@@ -52,3 +52,4 @@ The Amplify Console will fork this repo in your GitHub account, and then build a
   ```
 
 Checkout Nader Dabit's [Complete Guide to User Authentication](https://dev.to/dabit3/the-complete-guide-to-user-authentication-with-the-amplify-framework-2inh).
+# eyeball_ads
