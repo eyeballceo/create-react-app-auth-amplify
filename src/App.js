@@ -18,7 +18,7 @@ class App extends SignIn {
         <div className="App">
           <header className="App-header">
             <img src={eyeball_ads_logo} height="25%" width="25%" alt="eyeball_ads_logo" />
-            <PhotoPicker preview onLoad={dataURL => console.log('dataURL')} />
+            <PhotoPicker preview onLoad={dataURL => console.log(dataURL)} />
           </header>
         </div>
       );
