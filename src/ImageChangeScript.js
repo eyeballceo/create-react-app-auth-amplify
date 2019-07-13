@@ -9,6 +9,7 @@ import Amplify, { Auth } from 'aws-amplify';
 import { SignIn } from "aws-amplify-react";
 import aws_exports from './aws-exports';
 import {isMobile} from 'react-device-detect';
+import windowSize from 'react-window-size';
 Amplify.configure(aws_exports);
 
 class App extends SignIn {
@@ -26,8 +27,12 @@ class App extends SignIn {
     });
   }
 
-  formatImageAsAd(picture) {
-    
+  formatImageAsAd (picture) {
+    var yourImg = document.getElementById(picture);
+    if(picture) {
+      yourImg.style.height = '100px';
+      yourImg.style.width = '200px';
+    }
   }
 
   render() {
@@ -40,11 +45,10 @@ class App extends SignIn {
             <ImageUploader
               withIcon={true}
               buttonText='Image must be PNG format.'
-              onChange={this.formatImageAsAd}
+              onChange={this.onDrop}
               imgExtension={['.png']}
               maxFileSize={5242880}
               singleImage={true}
-              name={'stuff'}
             />
           </header>
         </div>
