@@ -21,13 +21,14 @@ class App extends SignIn {
   }
  
   onDrop(picture) {
-    console.log("GOT AN IMAGE!");
     this.setState({
         pictures: this.state.pictures.concat(picture),
     });
+    var yourImg = document.getElementById(picture);
+    window.alert(yourImg);
   }
 
-  formatImageAsAd (picture) {
+  _formatImageAsAd (picture) {
     var yourImg = document.getElementById(picture);
     if(picture) {
       yourImg.style.height = '100px';
